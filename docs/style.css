@@ -39,7 +39,6 @@ body {
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
-/* Base navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -52,12 +51,18 @@ body {
   align-items: flex-start;
 }
 
-/* Logo + Title + Toggle */
+/* Logo + Title grouped */
 .logo-area {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo {
@@ -67,8 +72,10 @@ body {
 .site-title {
   font-size: 1.2rem;
   white-space: nowrap;
+  margin: 0;
 }
 
+/* Toggle button */
 .menu-toggle {
   display: none;
   background: none;
