@@ -55,8 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.warn('Theme selector not found');
   // }
 // });
-document.getElementById('menu-toggle').addEventListener('click', () => {
-  document.querySelector('.navbar').classList.toggle('open');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('menu-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  if (toggle && navbar) {
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('open');
+    });
+  }
 });
 
 document.querySelector("form").addEventListener("submit", function (e) {
