@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggle && navbar) {
     toggle.addEventListener('click', () => {
+	console.log('Toggle clicked')
       navbar.classList.toggle('open');
     });
   }
