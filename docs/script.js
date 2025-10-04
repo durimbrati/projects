@@ -65,6 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+document.querySelectorAll('#main-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar.classList.contains('open')) {
+      navbar.classList.remove('open');
+    }
+  });
+});
 
 
 document.querySelector("form").addEventListener("submit", function (e) {
