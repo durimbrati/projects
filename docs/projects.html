@@ -4,32 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <title>Eris Generation Ltd</title>
+   <title>Projects | Eris Generation Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
   <header class="navbar">
     <div class="logo-area">
-      <img src="assets/logo_durim.png" alt="Eris Generation Logo" class="logo" />
-      <h1>Eris Generation Ltd</h1>
+      <div class="brand">
+        <img src="assets/logo_durim.png" alt="Logo" class="logo" />
+        <h1 class="site-title">Eris Generation Ltd</h1>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+		</a>
+      </button>
     </div>
-    <nav>
+
+    <nav id="main-nav">
       <a href="index.html#hero">Home</a>
-	  <a href="index.html#about">About</a>
+      <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#projects">Projects</a>
       <a href="index.html#process">Process</a>
       <a href="index.html#contact">Contact</a>
-    </nav>
+    
     <!-- <button id="theme-toggle">toggle theme</button> -->
     <select id="theme-selector">
       <option value="default">Light</option>
       <option value="dark">Dark</option>
       <option value="blue">Blue</option>
     </select>
+	</nav>
   </header>
   <section id="hero" class="hero-banner">
     <div class="overlay">
