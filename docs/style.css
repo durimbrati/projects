@@ -76,34 +76,42 @@ body {
   cursor: pointer;
 }
 
-/* Desktop nav */
+/* Base: hide nav by default */
 #main-nav {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  width: 100%;
-  justify-content: flex-end;
+  display: none;
 }
 
-/* Mobile layout */
+/* Desktop nav */
+@media (min-width: 769px) {
+  #main-nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Mobile nav */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
-  #main-nav {
-    display: none;
+  .navbar.open #main-nav {
+    display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
     background: var(--card-bg);
     padding: 1rem 0;
   }
-
-  .navbar.open #main-nav {
-    display: flex;
-  }
 }
+
 
 /* Base styles */
 
