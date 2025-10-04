@@ -55,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.warn('Theme selector not found');
   // }
 // });
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar').classList.toggle('open');
+});
+
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
   alert("Thanks for reaching out! We'll get back to you soon.");

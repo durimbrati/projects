@@ -39,39 +39,62 @@ body {
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
-/* Default: hide mobile nav and toggle on desktop */
-.menu-toggle {
-  display: none;
+/* Base styles */
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#mobile-nav {
+.logo {
+  height: 40px;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Desktop nav */
+#main-nav {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #fff;
-    margin-left: auto;
-    cursor: pointer;
+  .navbar {
+    align-items: flex-start;
   }
 
-  #mobile-nav {
+  #main-nav {
     display: none;
     flex-direction: column;
-    background: #222;
-    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
   }
 
-  .navbar.open #mobile-nav {
+  .navbar.open #main-nav {
     display: flex;
   }
+
+  .menu-toggle {
+    display: block;
+  }
 }
+
 
 .navbar {
   position: sticky;
@@ -242,7 +265,7 @@ nav a.active {
   gap: 3rem;
   justify-items: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   #gallery.cards {
     grid-template-columns: 1fr;
   }
