@@ -41,7 +41,7 @@ body {
 }
 
 
-/* ========== Navbar Container ========== */
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -54,7 +54,7 @@ body {
   align-items: flex-start;
 }
 
-/* ========== Logo + Title + Toggle ========== */
+/* Logo + Title + Toggle */
 .logo-area {
   display: flex;
   justify-content: space-between;
@@ -78,7 +78,6 @@ body {
   margin: 0;
 }
 
-/* ========== Toggle Button ========== */
 .menu-toggle {
   display: none;
   background: none;
@@ -88,7 +87,7 @@ body {
   cursor: pointer;
 }
 
-/* ========== Navigation Menu ========== */
+/* Nav hidden by default */
 #main-nav {
   display: none;
   flex-direction: column;
@@ -96,17 +95,16 @@ body {
   margin-top: 1rem;
   background: var(--card-bg);
   padding: 1rem 0;
-  transition: max-height 0.3s ease;
 }
 
 .navbar.open #main-nav {
   display: flex;
 }
 
-/* ========== Nav Links ========== */
-
+/* Nav links */
 #main-nav a {
-  margin: 0 1rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   color: var(--link-color);
   font-weight: bold;
@@ -119,11 +117,9 @@ body {
 
 #main-nav a.active {
   color: var(--accent-color);
-  font-weight: bold;
-}
 }
 
-/* ========== Desktop Layout ========== */
+/* Desktop layout */
 @media (min-width: 769px) {
   .navbar {
     flex-direction: row;
@@ -136,7 +132,7 @@ body {
   }
 
   #main-nav {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     gap: 1rem;
     margin-top: 0;
@@ -150,8 +146,6 @@ body {
     padding: 0;
   }
 }
-
-
 
 .hero-banner {
   background: url('hero.jpg') center/cover no-repeat;

@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggle && navbar) {
     toggle.addEventListener('click', () => {
-	console.log('Toggle clicked')
       navbar.classList.toggle('open');
     });
   }
 });
+
 
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
