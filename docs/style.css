@@ -39,6 +39,9 @@ body {
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
+
+
+/* ========== Navbar Container ========== */
 .navbar {
   position: sticky;
   top: 0;
@@ -51,7 +54,7 @@ body {
   align-items: flex-start;
 }
 
-/* Logo + Title grouped */
+/* ========== Logo + Title + Toggle ========== */
 .logo-area {
   display: flex;
   justify-content: space-between;
@@ -75,7 +78,7 @@ body {
   margin: 0;
 }
 
-/* Toggle button */
+/* ========== Toggle Button ========== */
 .menu-toggle {
   display: none;
   background: none;
@@ -85,7 +88,7 @@ body {
   cursor: pointer;
 }
 
-/* Nav hidden by default */
+/* ========== Navigation Menu ========== */
 #main-nav {
   display: none;
   flex-direction: column;
@@ -93,14 +96,34 @@ body {
   margin-top: 1rem;
   background: var(--card-bg);
   padding: 1rem 0;
+  transition: max-height 0.3s ease;
 }
 
-/* Show nav when toggled */
 .navbar.open #main-nav {
   display: flex;
 }
 
-/* Desktop layout */
+/* ========== Nav Links ========== */
+
+#main-nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#main-nav a:hover {
+  color: var(--hover-color);
+}
+
+#main-nav a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+}
+
+/* ========== Desktop Layout ========== */
 @media (min-width: 769px) {
   .navbar {
     flex-direction: row;
@@ -121,25 +144,13 @@ body {
     padding: 0;
     width: auto;
   }
+
+  #main-nav a {
+    margin: 0 1rem;
+    padding: 0;
+  }
 }
 
-
-#main-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: var(--link-color);
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-#main-nav a:hover {
-  color: var(--hover-color);
-}
-
-#main-nav a.active {
-  color: var(--accent-color);
-  font-weight: bold;
-}
 
 
 .hero-banner {
