@@ -276,22 +276,27 @@ body {
 .gallery-row img:hover {
   transform: scale(1.05);
 }
-#gallery.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+
+#gallery .cards {
+  grid-template-columns: repeat(1, 1fr); /* default for mobile */
+}
+
+@media (min-width: 551px) {
+  #gallery .cards {
+    grid-template-columns: repeat(2, 1fr);
+	display: grid;
   gap: 3rem;
   justify-items: center;
-}
-@media (max-width: 650px) {
-  #gallery.cards {
-    grid-template-columns: 1fr;
   }
 }
-@media (max-width: 900px) {
-  #gallery.cards {
-   grid-template-columns: repeat(2, 1fr);
+
+@media (min-width: 901px) {
+  #gallery .cards {
+    grid-template-columns: repeat(3, 1fr);
+	display: grid;
+  gap: 3rem;
+  justify-items: center;
   }
-}
 .card {
   width: 100%;
   max-width: 350px;
