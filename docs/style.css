@@ -118,7 +118,11 @@ body {
 #main-nav a.active {
   color: var(--accent-color);
 }
-
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block !important;
+  }
+}
 /* Desktop layout */
 @media (min-width: 769px) {
   .navbar {
