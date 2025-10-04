@@ -311,7 +311,7 @@
         card.id = `project-${index}`;
 
         const mainLink = document.createElement('a');
-        mainLink.href = project.images[0];
+        mainLink.href = `../uploads/${project.images[0]}`;
         mainLink.setAttribute('data-pswp-width', '1200');
         mainLink.setAttribute('data-pswp-height', '800');
         mainLink.target = '_blank';
@@ -322,7 +322,7 @@
 
         for (let i = 1; i < project.images.length; i++) {
           const hiddenLink = document.createElement('a');
-          hiddenLink.href = project.images[i];
+          hiddenLink.href = `../uploads/${project.images[i]}`
           hiddenLink.setAttribute('data-pswp-width', '1200');
           hiddenLink.setAttribute('data-pswp-height', '800');
           hiddenLink.style.display = 'none';
