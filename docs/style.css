@@ -279,6 +279,8 @@ body {
 
 #gallery .cards {
   grid-template-columns: repeat(1, 1fr); /* default for mobile */
+  gap: 3rem;
+  justify-items: center;
 }
 
 @media (min-width: 551px) {
@@ -297,6 +299,7 @@ body {
   gap: 3rem;
   justify-items: center;
   }
+}
 .card {
   width: 100%;
   max-width: 350px;
